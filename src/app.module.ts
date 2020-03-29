@@ -5,9 +5,10 @@ import { typeOrmConfig } from './config/typeorm.config';
 import { TaskService } from './task/task.service';
 import { TaskController } from './task/task.controller';
 import { TaskModule } from './task/task.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(typeOrmConfig), TasksModule, TaskModule],
+  imports: [TypeOrmModule.forRoot(typeOrmConfig), TasksModule, TaskModule, AuthModule],
   providers: [TaskService],
   controllers: [TaskController],
 })
