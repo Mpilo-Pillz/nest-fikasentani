@@ -44,8 +44,3 @@ export class UserRepository extends Repository<User> {
     }
 }
 
-// const exists = this.findOne({username});
-
-        // if (exists) {
-
-        // }
