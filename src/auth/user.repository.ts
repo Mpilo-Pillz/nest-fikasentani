@@ -7,7 +7,11 @@ import { InternalServerErrorException, ConflictException } from "@nestjs/common"
 @EntityRepository(User)
 export class UserRepository extends Repository<User> {
     async signUp(authCredentialsDto: AuthCredentialsDto): Promise<void> {
+        console.log('PAssed here');
+        
         const { username, password } = authCredentialsDto;
+        console.log('Cali-->', authCredentialsDto);
+        
         
         // const salt = await bcrypt.genSalt();
         const user = new User();
